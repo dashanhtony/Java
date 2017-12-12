@@ -2,7 +2,33 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-       <bean id="userAction" class="com.spring.User" >
+       <bean id="userAction" class="com.lsz.spring.action.User" >
               <property name="username" value="admin"></property>
+       </bean>
+
+       <bean id="userService" class="com.lsz.spring.service.UserService"></bean>
+       <bean id="userAction1" class="com.lsz.spring.action.User1" >
+              <property name="userservice" ref="userService"></property>
+       </bean>
+
+       <bean id="userAction2" class="com.lsz.spring.action.User2" >
+              <property name="username">
+              <list>
+                     <value>zhang,san</value>
+                     <value>lisi</value>
+                     <value>wangwu</value>
+              </list>
+              </property>
+       </bean>
+
+       <bean id="userAction3" class="com.lsz.spring.action.User3">
+              <property name="props">
+                     <props>
+                            <prop key="url">jdbc:oracle:thin:@localhost:orl</prop>
+                            <prop key="driverName">oracle.jdbc.driver.OracleDriver</prop>
+                            <prop key="username">scott</prop>
+                            <prop key="password">tiger</prop>
+                     </props>
+              </property>
        </bean>
 </beans>

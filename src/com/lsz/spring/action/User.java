@@ -1,4 +1,4 @@
-package com.spring;
+package com.lsz.spring.action;
 
 /**
  * Created by Administrator on 2017/12/11.
