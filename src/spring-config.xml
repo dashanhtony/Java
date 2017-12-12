@@ -2,16 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-       <bean id="userAction" class="com.lsz.spring.action.User" >
+       <bean id="userAction" class="com.lsz.spring.setinjection.User" >
               <property name="username" value="admin"></property>
        </bean>
 
        <bean id="userService" class="com.lsz.spring.service.UserService"></bean>
-       <bean id="userAction1" class="com.lsz.spring.action.User1" >
+       <bean id="userAction1" class="com.lsz.spring.setinjection.User1" >
               <property name="userservice" ref="userService"></property>
        </bean>
 
-       <bean id="userAction2" class="com.lsz.spring.action.User2" >
+       <bean id="userAction2" class="com.lsz.spring.setinjection.User2" >
               <property name="username">
               <list>
                      <value>zhang,san</value>
@@ -21,7 +21,7 @@
               </property>
        </bean>
 
-       <bean id="userAction3" class="com.lsz.spring.action.User3">
+       <bean id="userAction3" class="com.lsz.spring.setinjection.User3">
               <property name="props">
                      <props>
                             <prop key="url">jdbc:oracle:thin:@localhost:orl</prop>
@@ -30,5 +30,11 @@
                             <prop key="password">tiger</prop>
                      </props>
               </property>
+       </bean>
+
+       <bean id="userAction4"class="com.lsz.spring.Structuralinjection.User">
+              <constructor-arg value="admin"></constructor-arg>
+              <constructor-arg value="admin" index="0"></constructor-arg>
+              <constructor-arg value="23" type="int" index="1"></constructor-arg>
        </bean>
 </beans>
