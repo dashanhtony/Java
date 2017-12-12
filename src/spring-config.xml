@@ -32,8 +32,7 @@
               </property>
        </bean>
 
-       <bean id="userAction4"class="com.lsz.spring.Structuralinjection.User">
-              <constructor-arg value="admin"></constructor-arg>
+       <bean id="userAction4" class="com.lsz.spring.Structuralinjection.User4">
               <constructor-arg value="admin" index="0"></constructor-arg>
               <constructor-arg value="23" type="int" index="1"></constructor-arg>
        </bean>
