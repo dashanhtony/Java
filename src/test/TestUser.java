@@ -16,6 +16,6 @@ public class TestUser extends TestCase {
         String result = action.login();
 
         //判断测试是否通过
-        assert Equals("success",result);
+        assertEquals("success",result);
     }
 }
