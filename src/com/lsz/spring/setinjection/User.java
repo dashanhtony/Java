@@ -1,4 +1,5 @@
 package com.lsz.spring.setinjection;
+import junit;
 
 /**
  * Created by Administrator on 2017/12/11.
@@ -11,5 +12,12 @@ public class User{
     }
     public void setUsername(String username) {
         this.username= username;
+    }
+
+    public String login() throws Exception{
+        if("admin".equals(username))
+            return "success";
+        else
+            return "error";
     }
 }
