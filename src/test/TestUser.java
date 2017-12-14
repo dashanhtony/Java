@@ -18,4 +18,16 @@ public class TestUser extends TestCase {
         //判断测试是否通过
         assertEquals("success",result);
     }
+
+    //用来进行初始化操作
+    @Override
+    protected void setUp() throws Exception {
+        System.out.println("setUp...");
+    }
+
+    //用来做销毁操作
+    @Override
+    protected void tearDown() throws Exception {
+        System.out.println("tearDown...");
+    }
 }
